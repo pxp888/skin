@@ -12,8 +12,8 @@ from matplotlib.image import imread
 def visualizer():
     st.write("## Sample Visualizer")
 
-    os.chdir(os.path.expanduser('~'))
-    os.chdir('Desktop/skin')
+    # os.chdir(os.path.expanduser('~'))
+    # os.chdir('Desktop/skin')
 
     train_dir = 'inputs/work/test'
 
