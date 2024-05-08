@@ -1,6 +1,100 @@
-# skin
-skin cancer detection
+# Skin Cancer Detection
 
+
+
+## Introduction
+This project aims to leverage data analysis and machine learning techniques to develop a system that can automatically classify skin lesions based on digital images.
+
+
+## Business Requirements
+Automated Classification: The client desires an automated system to classify skin lesions into specific categories. This will assist medical professionals in diagnosis by identifying the type of lesion present (e.g., melanoma, benign nevus).
+
+Improved Diagnostic Workflow: The client seeks to integrate this system into their existing diagnostic workflow, enabling faster and more efficient triage of patients.
+
+## Hypothesis and Validation
+
+We hypothesize that different skin lesions exhibit distinct visual characteristics in digital images. By analyzing these features, we can develop a model to accurately classify lesions into predefined categories.  This hypothesis will be validated through experimentation with various machine learning models and evaluation on unseen test data.
+
+### Data Visualization and Machine Learning Tasks
+
+Data Exploration: Explore the image dataset to understand the distribution of different lesion types and potential challenges.
+
+### Machine Learning
+
+Develop a multi-class classification model to predict the type of skin lesion present in an image.
+Generate classification reports summarizing model performance for each lesion class.
+Machine Learning Project: SkinLesionClassifier
+
+### Objective:
+
+Develop a machine learning model (SkinLesionClassifier) to classify skin lesions into predefined categories based on digital images. This supervised learning model will be a multi-class classifier, with each class representing a specific type of lesion.
+
+### Desired Outcome:
+
+Equip medical staff with a tool that can assist in the diagnosis of skin lesions. The model should achieve a high accuracy (ideally above 65%) on unseen test data, particularly for differentiating between cancerous and benign lesions.
+
+#### Model Output:
+
+Predicted class label corresponding to the type of skin lesion present (e.g., melanoma, benign nevus).
+Probability scores for each lesion class, indicating the model's confidence in its prediction.
+
+#### Benefits:
+
+Improve diagnostic accuracy and efficiency by leveraging machine learning for lesion classification.
+Assist medical professionals in prioritizing cases and making informed decisions.
+Reduce reliance on subjective visual assessment, potentially leading to a more consistent diagnostic approach.
+
+#### Heuristics:
+
+Current skin lesion diagnosis often relies on visual examination by dermatologists. This approach can be time-consuming and subjective, leading to potential for misdiagnosis.
+
+### Data Acquisition:
+
+The training data will be sourced from the National Institutes of Health (NIH) website, specifically a subset of 5643 images downloaded for efficient model training. This dataset will contain images of various skin lesions with corresponding labels indicating their type.
+
+### Features and Target Variables:
+
+Features: Image data representing skin lesions.
+Target Variable: Categorical label indicating the specific type of skin lesion present.
+
+Next Steps:
+
+* Data exploration and pre-processing.
+* Feature engineering (if necessary).
+* Model selection and training.
+* Model evaluation and optimization.
+* Deployment and integration into a diagnostic tool.
+
+<br>
+
+## Dataset Content
+
+A training set for academic machine learning can be created using the dataset, which comprises of 10015 dermatoscopic images. All significant diagnostic categories for pigmented lesions are represented in the cases in a representative manner:
+
+* Actinic keratoses and intraepithelial carcinoma / Bowen's disease (__akiec__)
+* basal cell carcinoma (__bcc__)
+* benign keratosis-like lesions (solar lentigines / seborrheic keratoses and lichen-planus like keratoses, __bkl__)
+* dermatofibroma (__df__)
+* melanoma (__mel__)
+* melanocytic nevi (__nv__)
+* vascular lesions (angiomas, angiokeratomas, pyogenic granulomas and hemorrhage, __vasc__).
+
+These classes are not evenly represented in the dataset, as the table below shows.  
+
+### Class Distribution
+|Class|Count|
+|-|-|
+bkl   | 1099
+nv    | 6705
+df    | 115
+mel   | 1113
+vasc  | 142
+bcc   | 514
+akiec | 327
+TOTAL | 10015
+
+
+<br>
 
 ## Caveat 
 
@@ -16,9 +110,7 @@ The most successful approach I saw was written by someone who seems to be an esp
 
 This is lower than what the same author has achieved with similar techniques on other datasets.  
 
-This is linked to here:  
-
-[https://www.kaggle.com/code/gpiosenka/skin-cancer-f1-score-73](https://www.kaggle.com/code/gpiosenka/skin-cancer-f1-score-73)
+This is linked to here:   [https://www.kaggle.com/code/gpiosenka/skin-cancer-f1-score-73](https://www.kaggle.com/code/gpiosenka/skin-cancer-f1-score-73)
 
 
 
