@@ -15,7 +15,7 @@ def classifyImage(im):
 
     image = np.expand_dims(image, axis=0)
 
-    model = load_model('outputs/model.keras')
+    model = load_model('assets/model.keras')
     out = model.predict(image)
     return out
 
