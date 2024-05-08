@@ -15,19 +15,18 @@ def visualizer():
     os.chdir(os.path.expanduser('~'))
     os.chdir('Desktop/skin')
 
-    train_dir = 'inputs/work/train'
-    test_dir = 'inputs/work/test'
-    val_dir = 'inputs/work/validate'
+    train_dir = 'inputs/work/test'
 
-    subdirs = [subdir for subdir in os.listdir(train_dir) if os.path.isdir(os.path.join(train_dir, subdir))]
+    fig, axes = plt.subplots(7, 5, figsize=(10, 15))
+    subdirs = os.listdir(train_dir)
+    for sub in subdirs:
+        imfiles = os.listdir(os.path.join(train_dir, sub))
+        rn.shuffle(imfiles)
+        for i in range(5):
+            img = imread(os.path.join(train_dir, sub, imfiles[i]))
+            axes[subdirs.index(sub), i].imshow(img)
+            axes[subdirs.index(sub), i].axis('off')
+            axes[subdirs.index(sub), i].set_title(sub)
+    plt.tight_layout()
+    st.pyplot(fig)
 
-    for subdir in enumerate(subdirs):
-        fig, axs = plt.subplots(1, 5, figsize=(20, 20))
-        img_files = [img_file for img_file in os.listdir(os.path.join(train_dir, subdir)) if img_file.endswith('.jpg')]
-        for j in range(5):
-            img = imread(os.path.join(train_dir, subdir, rn.choice(img_files)))
-            axs[0, j].imshow(img)
-            axs[0, j].axis('off')
-            axs[0, j].set_title(subdir)
-        st.write(subdir)
-        st.pyplot(fig)
