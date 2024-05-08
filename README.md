@@ -26,7 +26,7 @@ Develop a machine learning model to classify skin lesions into predefined catego
 
 ### Desired Outcome:
 
-Equip medical staff with a tool that can assist in the diagnosis of skin lesions. The model should achieve a high accuracy (ideally above 65%) on unseen test data, particularly for differentiating between cancerous and benign lesions.
+Equip medical staff with a tool that can assist in the diagnosis of skin lesions. The model should achieve a high accuracy on unseen test data, particularly for differentiating between cancerous and benign lesions.
 
 #### Model Output:
 Predicted class label corresponding to the type of skin lesion present (e.g., melanoma, benign nevus).
@@ -40,10 +40,8 @@ Assist medical professionals in prioritizing cases and making informed decisions
 Reduce reliance on subjective visual assessment, potentially leading to a more consistent diagnostic approach.
 
 #### Heuristics:
-Current skin lesion diagnosis often relies on visual examination by medical professionals.  This approach can be time-consuming and subjective, leading to potential for misdiagnosis.
+Current skin lesion diagnosis relies on visual examination by medical professionals.  This approach can be time-consuming and subjective, leading to potential for misdiagnosis.
 
-### Data Acquisition:
-The training data will be sourced from the National Institutes of Health (NIH) website, specifically a subset of 5643 images downloaded for efficient model training. This dataset will contain images of various skin lesions with corresponding labels indicating their type.
 
 ### Features and Target Variables:
 
@@ -52,15 +50,6 @@ Features: Image data representing skin lesions.
 Target Variable: Categorical label indicating the specific type of skin lesion present.
 
 
-
-Next Steps:
-
-
-* Data exploration and pre-processing.
-* Feature engineering (if necessary).
-* Model selection and training.
-* Model evaluation and optimization.
-* Deployment and integration into a diagnostic tool.
 
 
 
@@ -107,7 +96,7 @@ However, when studying the work others have done with the same dataset on Kaggle
 
 The most successful approach I saw was written by someone who seems to be an especially knowledgable author. He used a very large pre-trained model as a base model, extensive data preparation, and managed to achieve a final F1 score of 73%.
 
-This is lower than what the same author has achieved with similar techniques on other datasets, and to my knowledge his approach represents the current state-of-the-art.
+This is lower than what the same author has achieved with similar techniques on other datasets, and to my knowledge his approach represents the current state-of-the-art for CNN based classifier networks. 
 
 This is linked to here: [https://www.kaggle.com/code/gpiosenka/skin-cancer-f1-score-73](https://www.kaggle.com/code/gpiosenka/skin-cancer-f1-score-73)
 
@@ -119,3 +108,4 @@ While the dataset contains roughly ten thousand images, they are not evenly divi
 
 **Possible mislabeling?**
 I don't have the knowledge to check this, but it is possible that some of the samples are mislabeled which could cause issues.
+
