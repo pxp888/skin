@@ -24,3 +24,11 @@ def summary_body():
         f"* 1 - The client is interested in having a study to differentiate "
         f"between types of skin cancers.\n"
         )
+
+    st.warning(
+        f"## Warning \n"
+        f"This streamlit app is not functional with Heroku. \n"
+        f"This model uses a dataset too large for Heroku's ephemeral storage, \n"
+        f"and the model is too large to be pushed to Heroku. \n"
+        f"This project needs to be refactored for use with Heroku. \n"
+    )
