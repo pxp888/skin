@@ -88,7 +88,12 @@ These classes are not evenly represented in the dataset, as the table below show
 
   <br>
 
-## Caveat
+## Training Results
+
+![image1](assets/images/train1.png)
+![con1](assets/images/con1.png)
+
+
 ### This is a difficult data set.
 While I was able to get a network to converge, the final results were never close to what I would consider usable in practice.
 
