@@ -59,6 +59,8 @@ Target Variable: Categorical label indicating the specific type of skin lesion p
 
 ## Dataset Content
 
+The dataset can be found [here](https://www.kaggle.com/datasets/farjanakabirsamanta/skin-cancer-dataset). 
+
 A training set for academic machine learning can be created using the dataset, which comprises of 10015 images. Several diagnostic categories for cancers or lesions are represented in the dataset:
 
 * Actinic keratoses and intraepithelial carcinoma / Bowen's disease (__akiec__)
